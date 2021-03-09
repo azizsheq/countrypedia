@@ -1,11 +1,21 @@
-import { Button } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './components/Home/Home';
 
 function App() {
   return (
-    <div className="container">
-      <h1>Hello</h1>
-      <Button>Bootstrap</Button>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
+
   );
 }
 
